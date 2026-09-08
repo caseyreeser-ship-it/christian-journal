@@ -13,7 +13,7 @@ export default function DailyJournal({ entry, onChange }) {
   return (
     <section className="journal-stack">
       <JournalPrompt
-        label="How did God show up yesterday?"
+        label="TEST TEST TEST"
         value={entry.godShowedUp}
         onChange={(v) => setField('godShowedUp', v)}
       />
