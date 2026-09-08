@@ -32,7 +32,6 @@ export default function DailyJournal({ entry, onChange }) {
   value={entry.loveAboutCasey || ''}
   onChange={(v) => setField('loveAboutCasey', v)}
 />
-      
       <JournalPrompt label="What is one kind thing I can do for someone today?" value={entry.kindThingToday} onChange={(v) => setField('kindThingToday', v)} />
 
       <div className="prompt-card">
