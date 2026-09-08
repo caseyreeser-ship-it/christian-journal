@@ -12,7 +12,8 @@ const blankEntry = {
   prayer: '',
   gratitude: ['', '', ''],
   kindThingToday: '',
-  didKindThing: ''
+  didKindThing: '',
+  loveAboutCasey: ''
 };
 
 function getVerseForDate(dateKey) {
