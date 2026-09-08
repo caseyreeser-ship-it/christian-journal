@@ -10,7 +10,10 @@ body { margin: 0; min-width: 320px; min-height: 100vh; background: #f6f1e8; }
 button, textarea, input { font: inherit; }
 button { cursor: pointer; }
 
-.app-shell { min-height: 100vh; padding-bottom: 92px; }
+.app-shell {
+  min-height: 100vh;
+  padding-bottom: 150px;
+}
 .topbar {
   position: sticky; top: 0; z-index: 10;
   display: flex; justify-content: space-between; align-items: center;
@@ -58,7 +61,7 @@ textarea:focus, .gratitude-card input:focus { border-color: #718c78; box-shadow:
 .empty-state { padding: 34px 18px; text-align: center; border: 1px dashed #d8cdbc; border-radius: 18px; color: #7b8079; background: rgba(255,255,255,.35); }
 
 .bottom-nav {
-  position: fixed; left: 50%; transform: translateX(-50%); bottom: 14px; z-index: 20;
+  position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(14px + env(safe-area-inset-bottom)); z-index: 20;
   width: min(360px, calc(100% - 28px)); display: grid; grid-template-columns: 1fr 1fr;
   padding: 7px; background: rgba(34,48,39,.95); border-radius: 20px; box-shadow: 0 14px 35px rgba(30,41,34,.25); backdrop-filter: blur(14px);
 }
