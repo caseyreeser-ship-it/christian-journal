@@ -1,0 +1,72 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #243128;
+  background: #f6f1e8;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #f6f1e8; }
+button, textarea, input { font: inherit; }
+button { cursor: pointer; }
+
+.app-shell { min-height: 100vh; padding-bottom: 92px; }
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 18px 14px;
+  background: rgba(246,241,232,.94); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(53,73,59,.09);
+}
+.brand { display: flex; gap: 8px; align-items: center; font-family: Georgia, serif; font-size: 20px; font-weight: 700; }
+.topbar p { margin: 3px 0 0; font-size: 12px; color: #748076; }
+.save-status { display: flex; gap: 5px; align-items: center; opacity: 0; font-size: 12px; color: #6a776e; transition: opacity .2s ease; }
+.save-status.show { opacity: 1; }
+
+main { width: min(760px, 100%); margin: 0 auto; padding: 24px 16px 40px; }
+.date-heading span { text-transform: uppercase; letter-spacing: .12em; font-size: 11px; font-weight: 700; color: #8a7a5b; }
+.date-heading h1 { margin: 7px 0 18px; font-family: Georgia, serif; font-size: clamp(28px, 7vw, 42px); line-height: 1.08; color: #27372c; }
+
+.verse-card {
+  padding: 22px; margin-bottom: 18px; border-radius: 20px;
+  background: #304c3a; color: #fffdf7; box-shadow: 0 10px 30px rgba(39,55,44,.13);
+}
+.eyebrow { display: flex; gap: 7px; align-items: center; text-transform: uppercase; letter-spacing: .12em; font-size: 11px; opacity: .8; }
+.verse-card blockquote { margin: 18px 0 12px; font-family: Georgia, serif; font-size: 23px; line-height: 1.45; }
+.verse-card p { margin: 0; font-size: 13px; opacity: .78; }
+
+.journal-stack { display: grid; gap: 14px; }
+.prompt-card { display: block; padding: 17px; border-radius: 18px; background: #fffdf8; border: 1px solid #e8dfcf; box-shadow: 0 3px 12px rgba(62,55,40,.035); }
+.prompt-card > span { display: block; margin-bottom: 11px; font-weight: 700; line-height: 1.35; }
+textarea, .gratitude-card input {
+  width: 100%; border: 1px solid #e1d8c9; background: #faf7f0; border-radius: 12px; color: #2f3a32; outline: none;
+}
+textarea { resize: vertical; min-height: 96px; padding: 12px; line-height: 1.5; }
+.gratitude-card { display: grid; gap: 9px; }
+.gratitude-card > span { margin-bottom: 2px; }
+.gratitude-card input { padding: 12px 13px; }
+textarea:focus, .gratitude-card input:focus { border-color: #718c78; box-shadow: 0 0 0 3px rgba(113,140,120,.12); }
+.segmented { display: grid; grid-template-columns: 1fr 1fr 1.25fr; gap: 7px; }
+.segmented button { border: 1px solid #ddd4c4; background: #faf7f0; color: #566057; padding: 10px 8px; border-radius: 11px; font-size: 13px; }
+.segmented button.active { background: #304c3a; color: white; border-color: #304c3a; }
+
+.history-list { display: grid; gap: 10px; }
+.history-row { width: 100%; border: 1px solid #e8dfcf; background: #fffdf8; border-radius: 16px; padding: 16px; display: flex; align-items: center; justify-content: space-between; color: #2f3a32; text-align: left; }
+.history-row div { display: grid; gap: 2px; }
+.history-row strong { font-family: Georgia, serif; font-size: 18px; }
+.history-row span { font-size: 12px; color: #7c857e; }
+.empty-state { padding: 34px 18px; text-align: center; border: 1px dashed #d8cdbc; border-radius: 18px; color: #7b8079; background: rgba(255,255,255,.35); }
+
+.bottom-nav {
+  position: fixed; left: 50%; transform: translateX(-50%); bottom: 14px; z-index: 20;
+  width: min(360px, calc(100% - 28px)); display: grid; grid-template-columns: 1fr 1fr;
+  padding: 7px; background: rgba(34,48,39,.95); border-radius: 20px; box-shadow: 0 14px 35px rgba(30,41,34,.25); backdrop-filter: blur(14px);
+}
+.bottom-nav button { display: flex; align-items: center; justify-content: center; gap: 7px; border: 0; background: transparent; color: #bfc9c1; border-radius: 14px; padding: 12px; }
+.bottom-nav button.active { background: #f6f1e8; color: #304c3a; }
+.bottom-nav span { font-size: 13px; font-weight: 700; }
+
+@media (min-width: 700px) {
+  main { padding-top: 34px; }
+  .prompt-card { padding: 20px; }
+}
