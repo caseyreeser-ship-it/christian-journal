@@ -43,7 +43,7 @@ export default function DailyJournal({ entry, onChange }) {
       </div>
 
       <JournalPrompt
-        label="What is one thing you absolutely love about Casey?"
+        label="What is one thing I absolutely love about Casey?"
         value={entry.loveAboutCasey || ''}
         onChange={(v) => setField('loveAboutCasey', v)}
       />
